@@ -16,7 +16,7 @@ def make_move(board):
         for j in range(3):
             if board[i][j]=="":
                 board[i][j]=player
-                moveVal=minimax(board,0,isMax,opponent=opponent,player=player)
+                moveVal=minimax(board,0,isMax,opponent=opponent,player=player,alpha=-float('inf'),beta=float('inf'))
                 board[i][j]=""
                 if moveVal>bestVal:
                     bestVal=moveVal
